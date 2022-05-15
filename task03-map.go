@@ -9,7 +9,7 @@ func sortMapValues(input map[int]string) (result []string) {
 		keysSlice = append(keysSlice, key)
 	}
 	sort.Slice(keysSlice, func(i, j int) bool {
-		return keysSlice[i] > keysSlice[j]
+		return keysSlice[i] < keysSlice[j]
 	})
 
 	sorted := make([]string, 0, len(input))
